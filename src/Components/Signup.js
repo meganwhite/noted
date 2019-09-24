@@ -17,7 +17,7 @@ export default function Signup (props) {
     function signup(e) {
         e.preventDefault();
         axios
-            .post('endpoint')
+            .post('endpoint',newCreds)
             .then(res => {
                 props.history.push("/")
             })
