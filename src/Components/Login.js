@@ -14,7 +14,7 @@ function Login (props) {
     function login(e) {
         e.preventDefault();
         axios
-            .post('endpoint',creds)
+            .post('https://mfw-noted.herokuapp.com/api/users',creds)
             .then(res => {
                 console.log(res);
                 localStorage.setItem('token',res.data.token);

@@ -17,7 +17,7 @@ export default function Signup (props) {
     function signup(e) {
         e.preventDefault();
         axios
-            .post('endpoint',newCreds)
+            .post('https://mfw-noted.herokuapp.com/api/users',newCreds)
             .then(res => {
                 props.history.push("/")
             })
