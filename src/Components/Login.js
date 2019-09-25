@@ -14,17 +14,17 @@ function Login (props) {
     function login(e) {
         e.preventDefault();
         axios
-            .post('https://mfw-noted.herokuapp.com/api/users',creds)
+            .post('https://mfw-noted.herokuapp.com/api/users/login',creds)
             .then(res => {
                 console.log(res);
                 localStorage.setItem('token',res.data.token);
-                localStorage.setItem('userid',res.data.userid);
+                localStorage.setItem('user_id',res.data.user.id);
                 setLoginStatus("success!");
                 setCreds({
                     username:'',
                     password:''
                 })
-                props.history.push("/")
+                props.history.push("/protected")
             })
             .catch(err => {
                 console.log(err);

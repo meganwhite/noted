@@ -16,8 +16,7 @@ function App() {
       <Route path="/" render={(props) => <HeaderNav {...props}/>} />
       <PrivateRoute exact path='/protected' component={NoteList}/>
       <Route path="/signup" component={Signup}/>
-      <Route exact path="/" component={Login}/>
-      <h1>Noted!</h1>
+      <Route exact path="/login" component={Login}/>
     </div>
   );
 }
