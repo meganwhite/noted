@@ -12,10 +12,16 @@ export default function HeaderNav(props) {
     return (
         <div>
             <div className='nav-bar'>
-                {!localStorage.token && <Link to="/login"><button>Log In</button></Link>}
-                {!localStorage.token && <Link to="/signup"><button>Sign Up</button></Link>}
-                {localStorage.token && <Link to="/protected"><button>Home</button></Link>}  
-                {localStorage.token && <Link to="/login"> <button onClick={logout}>Logout</button></Link>}
+                <div className='header-img'>
+
+                </div>
+                <h1>Noted.</h1>
+                <div className='header-buttons'>
+                    {!localStorage.token && <Link to="/login"><button>Log In</button></Link>}
+                    {!localStorage.token && <Link to="/signup"><button>Sign Up</button></Link>}
+                    {localStorage.token && <Link to="/protected"><button>Home</button></Link>}  
+                    {localStorage.token && <Link to="/login"> <button onClick={logout}>Logout</button></Link>}
+                </div>
             </div>
         </div>
     )

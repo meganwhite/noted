@@ -20,3 +20,72 @@
 .App-link {
   color: #09d3ac;
 }
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #78909c;
+  color: white;
+}
+
+.nav-bar h1 {
+  width: 50%;
+}
+
+.nav-bar .header-buttons {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar .header-buttons a {
+  text-decoration: none;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar .header-buttons a button {
+  text-decoration: none;
+  width: 100%;
+  height: 40%;
+  margin: 1rem;
+  background-color: #ff4444;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-bar .header-img {
+  width: 25%;
+}
+
+.notelist {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container .ui.card {
+  background-color: #ff4444;
+}
+
+/* .noteform {
+  background-color: #ff4444;
+  color: white;
+  width: 30%;
+  height: 80vh;
+  margin: 3rem;
+  position: relative;
+}
+
+.noteform form {
+  display: flex;
+  flex-direction: column;
+}
+
+.notecard {
+  background-color: white;
+} */
