@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import { axiosWithAuth } from '../Utils/axiosWithAuth';
 
 export default function HeaderNav(props) {
 
@@ -10,16 +11,34 @@ export default function HeaderNav(props) {
     }
     
     const username = localStorage.getItem('username');
+    const user_id = localStorage.getItem('user_id');
+
+    const [user,setUser] =useState({
+        username:"",
+        password:"",
+        avatar:"",
+    })
+
+    useEffect(() => {
+        axiosWithAuth()
+            .get(`https://mfw-noted.herokuapp.com/api/users/${user_id}`)
+            .then(res=> {
+                console.log(res)
+                setUser(res.data[0])
+            })
+            .catch(err => console.log(err.response))
+    },[])
+    
 
     return (
         <div>
             <div className='nav-bar'>
                 <div className='header-img'>
 
-                    <div className='img-container'>
-                        <img src="https://img.maximummedia.ie/joe_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE4XFxcLzAzXFxcLzA5MTIxNDAzXFxcL2hvbWVyLXNpbXBzb24uanBnXCIsXCJ3aWR0aFwiOjc2NyxcImhlaWdodFwiOjQzMSxcImRlZmF1bHRcIjpcImh0dHBzOlxcXC9cXFwvd3d3LmpvZS5pZVxcXC9hc3NldHNcXFwvaW1hZ2VzXFxcL2pvZVxcXC9uby1pbWFnZS5wbmc_aWQ9MjY0YTJkYmUzNzBmMmM2NzVmY2RcIixcIm9wdGlvbnNcIjpbXX0iLCJoYXNoIjoiZTM1MzgwZTM4OWRjNGQyNjBhN2I0NDE3ZjdlMmM1ZWE5NDE0MjM4MyJ9/homer-simpson.jpg"/>
+                    {localStorage.token && <div className='img-container'>
+                        <img src={user.avatar}/>
                         <p>Welcome, {username}</p>
-                    </div>
+                    </div>}
                 </div>
                 <h1>Noted. <span class="blinking-cursor">|</span></h1>
                 <div className='header-buttons'>
