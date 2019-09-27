@@ -48,7 +48,7 @@ export default function HeaderNav(props) {
                         <p>Welcome, {username}</p>
                     </div>}
                 </div>
-                <h1>Noted. </h1>
+                <h1>Noted. <span class="blinking-cursor">|</span></h1>
                 <div className='header-buttons'>
                     {!localStorage.token && <Link to="/login"><button>Log In</button></Link>}
                     {!localStorage.token && <Link to="/signup"><button>Sign Up</button></Link>}
