@@ -39,7 +39,7 @@ export default function NoteForm (props) {
         <Card>
                 <div className='content'>
                     <div className='header'>
-                        <h2>Add a new note</h2>
+                        <h2>Add a New Resource</h2>
                     </div>
                 </div>
                     <form onSubmit={createNote}>
@@ -59,6 +59,15 @@ export default function NoteForm (props) {
                                     name='topic'
                                     placeholder='Topic'
                                     value={newNote.topic}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                            <div className='ui input'>
+                                <input 
+                                    type='text'
+                                    name='link'
+                                    placeholder='Link'
+                                    value={newNote.link}
                                     onChange={handleChange}
                                 />
                             </div>

@@ -117,6 +117,25 @@
 
 .nav-bar .header-img {
   width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-bar .header-img .img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  
+}
+
+.nav-bar .header-img .img-container img{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  
 }
 
 .notelist {
@@ -180,6 +199,19 @@
 
 .note-container .ui.fluid.centered.card {
   width: 100%;
+}
+
+.note-container a {
+  text-decoration: none;
+  color: #ff4444;
+}
+
+.note-container .left.aligned.ui.sub.header {
+  color: #78909c;
+}
+
+.angle.right.icon {
+  color: #78909c;
 }
 /* .noteform {
   background-color: #ff4444;

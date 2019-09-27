@@ -20,7 +20,7 @@ const BulletList = props => {
         <div className='bulletlist'>
             {bullets.map(bullet => {
                 return (
-                    <p>{bullet.note}</p>
+                    <p><i className="angle right icon"></i>{bullet.note}</p>
                 )
             })}
         </div>
