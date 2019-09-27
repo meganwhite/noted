@@ -3,6 +3,7 @@ import Note from './Note';
 import { axiosWithAuth } from '../Utils/axiosWithAuth';
 import NoteForm from './NoteForm.js';
 
+
 const NoteList = props => {
     const [notes, setNotes] = useState([
         {
@@ -38,15 +39,16 @@ const NoteList = props => {
                 <NoteForm/>  
             </div>
             <div className='note-container'>
-            <h2>Notelist renders here</h2>
             {notes.map(note => {
                 return (
                     <Note
                         key={note.id}
+                        id={note.id}
                         title={note.title}
                         topic={note.topic}
-                        user_id={note.user_id}
-                    />
+                        user_id={note.user_id}>
+                    </Note>
+                    
                 )
             })}
             </div>

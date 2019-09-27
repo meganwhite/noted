@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from 'semantic-ui-react'
+import BulletList from './BulletList.js';
 
 
 const Note = props => {
@@ -17,18 +18,15 @@ const Note = props => {
                             <div className="left aligned content">
                                 <h4>{props.link}</h4>
                                 <h4>{props.user_id}</h4>
-                                {/* {props.notes.map(note => {
-                                    return (
-                                        <p>{note}</p>
-                                    )
-                                })} */}
+                                <BulletList resourceId={props.id}/>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="left aligned extra content">
                     <div className="ui large transparent left icon input">
-                        <i className="heart outline icon"></i>
+                        <i className="edit outline icon"></i>
                         <input type="text" placeholder="Add Comment..."/>
                     </div>
                 </div>

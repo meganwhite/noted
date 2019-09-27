@@ -42,7 +42,6 @@ export default function NoteForm (props) {
                         <h2>Add a new note</h2>
                     </div>
                 </div>
-                <div className='content'></div>
                     <form onSubmit={createNote}>
                         <div className='content'>
                             <div className='ui input'>
