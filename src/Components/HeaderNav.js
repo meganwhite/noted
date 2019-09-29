@@ -31,7 +31,7 @@ export default function HeaderNav(props) {
     
     let avatar = ""
     switch(user.avatar) {
-        case "":
+        case null:
             avatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg";
             break;
         default:
