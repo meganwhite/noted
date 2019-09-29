@@ -29,14 +29,14 @@ export default function HeaderNav(props) {
             .catch(err => console.log(err.response))
     },[])
     
-    let avatar = ""
-    switch(user.avatar) {
-        case null:
-            avatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg";
-            break;
-        default:
-            avatar=user.avatar
-    }
+    // let avatar = ""
+    // switch(user.avatar) {
+    //     case null:
+    //         avatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg";
+    //         break;
+    //     default:
+    //         avatar=user.avatar
+    // }
 
     return (
         <div>
