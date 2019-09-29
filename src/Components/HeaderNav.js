@@ -44,7 +44,7 @@ export default function HeaderNav(props) {
                 <div className='header-img'>
 
                     {localStorage.token && <div className='img-container'>
-                        <img src={avatar}/>
+                        <img src=""/>
                         <p>Welcome, {username}</p>
                     </div>}
                 </div>
