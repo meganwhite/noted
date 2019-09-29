@@ -29,14 +29,14 @@ export default function HeaderNav(props) {
             .catch(err => console.log(err.response))
     },[])
     
-    // let avatar = ""
-    // switch(user.avatar) {
-    //     case null:
-    //         avatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg";
-    //         break;
-    //     default:
-    //         avatar=user.avatar
-    // }
+    let avatar = ""
+    switch(user.avatar) {
+        case null:
+            avatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg";
+            break;
+        default:
+            avatar=user.avatar
+    }
 
     return (
         <div>
@@ -44,7 +44,7 @@ export default function HeaderNav(props) {
                 <div className='header-img'>
 
                     {localStorage.token && <div className='img-container'>
-                        <img src=""/>
+                        <img src={avatar}/>
                         <p>Welcome, {username}</p>
                     </div>}
                 </div>
