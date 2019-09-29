@@ -6,6 +6,8 @@ export default function HeaderNav(props) {
 
     function logout() {
         localStorage.removeItem('token');
+        localStorage.removeItem('user_id');
+        localStorage.removeItem('username')
         props.history.push('/')
         console.log('logged out');
     }
