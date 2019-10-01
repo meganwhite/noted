@@ -6,39 +6,30 @@ export default function HeaderNav(props) {
 
     function logout() {
         localStorage.removeItem('token');
+        localStorage.removeItem('userid');
+        localStorage.removeItem('username');
         localStorage.removeItem('user_id');
-        localStorage.removeItem('username')
+        localStorage.removeItem('avatar');
         props.history.push('/')
         console.log('logged out');
     }
     
     const username = localStorage.getItem('username');
-    const user_id = localStorage.getItem('user_id');
 
-    const [user,setUser] =useState({
-        username:"",
-        password:"",
-        avatar:"",
-    })
-
-    useEffect(() => {
-        axiosWithAuth()
-            .get(`https://mfw-noted.herokuapp.com/api/users/${user_id}`)
-            .then(res=> {
-                console.log(res)
-                setUser(res.data[0])
-            })
-            .catch(err => console.log(err.response))
-    },[])
-    
-    let avatar = ""
-    switch(user.avatar) {
-        case null:
-            avatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg";
-            break;
-        default:
-            avatar=user.avatar
+    function setAvatar() {
+        let propic = "";
+        const avatar = localStorage.getItem('avatar');
+        const defaultAvatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg"
+        if (avatar === "null") {
+            propic = defaultAvatar;
+        }
+        else {
+            propic = avatar;
+        }
+        console.log(propic)
+        return propic;
     }
+
 
     return (
         <div>
@@ -46,7 +37,7 @@ export default function HeaderNav(props) {
                 <div className='header-img'>
 
                     {localStorage.token && <div className='img-container'>
-                        <img src={avatar}/>
+                        <img src={setAvatar()}/>
                         <p>Welcome, {username}</p>
                     </div>}
                 </div>

@@ -18,8 +18,9 @@ function Login (props) {
             .then(res => {
                 console.log(res);
                 localStorage.setItem('token',res.data.token);
-                localStorage.setItem('user_id',res.data.user.id);
+                localStorage.setItem('userid',res.data.user.id);
                 localStorage.setItem('username',res.data.user.username);
+                localStorage.setItem('avatar',res.data.user.avatar)
                 setLoginStatus("success!");
                 setCreds({
                     username:'',
