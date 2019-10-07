@@ -21,7 +21,7 @@ const NoteList = props => {
 
     ]);
 
-    const userId = localStorage.getItem('user_id')
+    const userId = localStorage.getItem('userid')
 
     useEffect(() => {
         axiosWithAuth()

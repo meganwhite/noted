@@ -6,7 +6,7 @@ export default function NoteForm (props) {
     const [newNote,setNewNote] = useState({
         title: '',
         topic: '',
-        user_id: localStorage.getItem('user_id'),
+        user_id: localStorage.getItem('userid'),
     })
 
     const [newNoteStatus, setNewNoteStatus] = useState('')
