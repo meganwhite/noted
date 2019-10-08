@@ -13,7 +13,7 @@ const NoteList = props => {
 
     useEffect(() => {
         axiosWithAuth()
-            .get(`https://mfw-noted.herokuapp.com/api/resources/${userId}`)
+            .get(`https://mfw-noted.herokuapp.com/api/resources/users/${userId}`)
             .then(res => {
                 console.log(res)
                 setNotes(res.data)
