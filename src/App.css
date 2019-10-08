@@ -285,6 +285,26 @@
 .loginform .ui.card .createone {
   margin: 1rem;
 }
+
+.homelink {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar .homelink {
+  width: 50%;
+  height: 100%;
+}
+
+.nav-bar .homelink:hover{
+  color: white;
+}
+
+
+.nav-bar .homelink h1 {
+  width: 100%;
+  padding: 2rem;
+}
 /* .noteform {
   background-color: #ff4444;
   color: white;
