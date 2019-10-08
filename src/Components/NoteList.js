@@ -6,18 +6,6 @@ import NoteForm from './NoteForm.js';
 
 const NoteList = props => {
     const [notes, setNotes] = useState([
-        {
-            id: 1,
-            title: 'hi',
-            topic:'placeholder',
-            user_id: 1
-        },
-        {
-            id: 2,
-            title: 'greetings',
-            topic:'placeholder',
-            user_id: 1
-        },
 
     ]);
 

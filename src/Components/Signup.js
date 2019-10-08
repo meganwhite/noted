@@ -19,7 +19,7 @@ export default function Signup (props) {
         axios
             .post('https://mfw-noted.herokuapp.com/api/users/register',newCreds)
             .then(res => {
-                props.history.push("/")
+                props.history.push("/login")
             })
             .catch(err => {
                 console.log(err);
@@ -28,6 +28,7 @@ export default function Signup (props) {
                     username:'',
                     password:''
                 })
+                props.history.push("/login")
             })
     }
 
@@ -68,7 +69,6 @@ export default function Signup (props) {
                     </label>
                 </div>
                 <button className="ui button" type="submit">Sign Up</button>
-                {{signupStatus} && <p>{signupStatus}</p>}
             </form>
             </div>
         </div>
