@@ -20,7 +20,7 @@ export default function HeaderNav(props) {
         let propic = "";
         const avatar = localStorage.getItem('avatar');
         const defaultAvatar = "https://cdn.omlet.co.uk/images/originals/alexandrine-parakeet-head-2.jpg"
-        if (avatar === "null") {
+        if (avatar === "") {
             propic = defaultAvatar;
         }
         else {
