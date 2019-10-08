@@ -39,29 +39,35 @@ function Login (props) {
     }
     
     return (
-        <div>
-            <form onSubmit={login}>
-                <label for='username'>Username
+        <div className="loginform">
+            <div className="ui card">
+            <form className="ui form" onSubmit={login}>
+                <div className ="field">
+                    <label for='username'>Username
                     <input
-                        type='username'
+                        type='text'
                         name='username'
                         value={creds.username}
                         onChange={handleChange}
                     />
-                </label>
-                <label for='password'>Password
+                    </label>
+                </div>
+                <div className ="field">
+                    <label for='password'>Password
                     <input
                         type='password'
                         name='password'
                         value={creds.password}
                         onChange={handleChange}
                     />
-                </label>
-                <button>Login</button>
-                <p>Don't have an account?</p>
-                <p><Link to='/signup'>Create one here</Link></p>
+                    </label>
+                </div>
+                <button className="ui button" type="submit">Log In</button>
+                <p className="donthave">Don't have an account?</p>
+                <p className="createone"><Link to='/signup'>Create one here</Link></p>
                 {loginStatus && <p>{loginStatus}</p>}
             </form>
+            </div>
         </div>
     )
 }

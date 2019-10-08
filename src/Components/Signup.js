@@ -32,26 +32,32 @@ export default function Signup (props) {
     }
 
     return (
-        <div>
+        <div className="signup">
+            <div className="ui card">
             <h2>Sign up to create an account</h2>
-            <form onSubmit = {signup}>
-                <label for='username'>Username
+            <form className="ui form" onSubmit = {signup}>
+            <div className="field">
+                    <label for='username'>Username
                     <input
-                    type='username'
+                    type='text'
                     name='username'
                     placeholder='username'
                     value={newCreds.username}
                     onChange={handleChange}/>
-                </label>
-                <label for='username'>Password
+                    </label>
+                </div>
+                <div className="field">
+                    <label for='password'>Password
                     <input
                     type='password'
                     name='password'
                     placeholder='password'
                     value={newCreds.password}
                     onChange={handleChange}/>
-                </label>
-                <label for='avatar'>Avatar
+                    </label>
+                </div>
+                <div className="field">
+                    <label for='avatar'>Avatar
                     <input
                         type='text'
                         name='avatar'
@@ -59,10 +65,12 @@ export default function Signup (props) {
                         value={newCreds.avatar}
                         onChange={handleChange}
                     />
-                </label>
-                <button>Sign Up</button>
+                    </label>
+                </div>
+                <button className="ui button" type="submit">Sign Up</button>
                 {{signupStatus} && <p>{signupStatus}</p>}
             </form>
+            </div>
         </div>
     )
 
