@@ -46,6 +46,7 @@ const NoteList = props => {
                         id={note.id}
                         title={note.title}
                         topic={note.topic}
+                        link={note.link}
                         user_id={note.user_id}>
                     </Note>
                     
