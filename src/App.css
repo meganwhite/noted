@@ -26,6 +26,12 @@
   justify-content: space-between;
   background-color: #78909c;
   color: white;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 9999;
+
 }
 
 .nav-bar h1 {
@@ -144,7 +150,10 @@
 
 .notelist {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  background-color: #eceff1;
+  padding-bottom: 30rem;
+  margin-top: 5rem;
 }
 
 .form-container {
@@ -152,6 +161,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  left: 0;
 }
 
 .form-container .ui.card {
@@ -190,7 +201,7 @@
 }
 
 .note-container {
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,11 +232,13 @@
 .signup {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .signup .ui.card {
   width: 50%;
   margin: 4rem;
+  padding-bottom: 2rem;
 }
 
 .signup .ui.card h2 {
@@ -255,6 +268,7 @@
 .loginform {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .loginform .ui.card {
